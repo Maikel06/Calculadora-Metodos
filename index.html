@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MM1</title>
+  <title>MD1</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -151,9 +151,9 @@
       <li><a href="MD1.html">MD1</a></li>
     </ul>
   </nav>
-  <form method="post" action="MM1.html">
+  <form method="post" action="MD1.html">
     <fieldset>
-      <legend>MM1</legend>
+      <legend>MD1</legend>
       <div class="form-group">
         <label>m</label>
         <input type="text" class="form-control" name="m" placeholder="" style="width: 615px">
@@ -167,70 +167,15 @@
         <input type="text" class="form-control" name="λ" placeholder="" style="width: 615px">
       </div>
       <div class="form-group">
-        <label>K</label>
+        <label>n</label>
         <input type="text" class="form-control" name="K" placeholder="" style="width: 615px">
       </div>
       <fieldset>
-        <button type="submit" class="btn btn-success" name="aceptar">Calcular</button>
+        <button type="submit" class="btn btn-warning" name="aceptar">Calcular</button>
       </fieldset>
     </fieldset>
   </form>
 
   <br>
-
-  <div>
-    <legend>Resultados</legend>
-    <p id="L"></p>
-    <p id="w"></p>
-    <p id="Lq"></p>
-    <p id="Wq"></p>
-    <p id="Ro"></p>
-    <p id="PO"></p>
-  </div>
-
-  <script>
-    function calculateForm() {
-      var m = document.getElementsByName("m")[0].value;
-      var mu = document.getElementsByName("μ")[0].value;
-      var lamda = document.getElementsByName("λ")[0].value;
-      var K = document.getElementsByName("K")[0].value;
-     /* var tiempo = document.getElementsByName("tiempo")[0].value;
-      var Cw = document.getElementsByName("cw")[0].value;
-      var Cs = document.getElementsByName("cs")[0].value;
-*/
-      
-      var lamdaElevado2 = Math.pow(lamda, 2);
-      var Lq = (lamdaElevado2 / (mu * (mu - lamda)));
-      var Wq = (lamda / mu) * (mu - lamda);
-      var Ro = lamda / mu;
-      var PO = 1 - lamda / mu;
-      var pnK = Math.pow(lamda / mu, parseInt(K) + 1);
-      var L = Lq + (1 - PO);
-      var w = Wq + (1 / mu);
-
-      /*var costoEsperaDiario = tiempo * lamda * Wq * Cw;
-      var costoTotalServicioDiario = Cs * m * tiempo;
-      var costoTotal = costoEsperaDiario + costoTotalServicioDiario;*/
-
-      /*document.getElementById("costoEsperaDiario").innerHTML = "Costo espera diario: " + costoEsperaDiario;
-      document.getElementById("costoTotalServicioDiario").innerHTML = "Costo total servicio diario: " + costoTotalServicioDiario;
-      document.getElementById("costoTotal").innerHTML = "Costo total: " + costoTotal;*/
-      document.getElementById("L").innerHTML = "L: " + L;
-      document.getElementById("w").innerHTML = "w: " + w + " " + (w * 60);
-      document.getElementById("Lq").innerHTML = "Lq: " + Lq;
-      document.getElementById("Wq").innerHTML = "Wq: " + Wq + " " + (Wq * 60);
-      document.getElementById("Ro").innerHTML = "Ro: " + Ro;
-      document.getElementById("PO").innerHTML = "PO: " + PO;
-      document.getElementById("pnK").innerHTML = "pn>K: " + pnK;
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      var form = document.querySelector("form");
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        calculateForm();
-      });
-    });
-  </script>
 </body>
 </html>
