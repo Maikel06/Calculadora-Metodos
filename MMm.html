@@ -4,17 +4,51 @@
   <title>MMM</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 10px;
     }
 
     nav ul {
       list-style-type: none;
+      margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
     }
 
     nav ul li {
-      display: inline;
-      margin-right: 10px;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #3498db;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     form {
@@ -23,124 +57,71 @@
 
     fieldset {
       border: none;
+      padding: 0;
+    }
+
+    legend {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2980b9;
+      margin-bottom: 20px;
     }
 
     .form-group {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-align: left;
     }
 
     label {
       display: block;
       font-weight: bold;
+      margin-bottom: 5px;
+      color: #34495e;
     }
 
     input[type="text"] {
-      width: 615px;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
     }
 
     button[type="submit"] {
       display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    background-color: #72b77a;
-    border: 2px solid #72b77a;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-    background-color: #fff;
-    color: #72b77a;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #e74c3c;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #c0392b;
     }
 
     h3 {
       margin-top: 20px;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: bold;
+      color: #34495e;
     }
 
     p {
       margin-bottom: 10px;
+      font-size: 16px;
+      color: #7f8c8d;
     }
 
-    nav {
-    background-color: #123e52;
-    padding: 10px;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  li {
-    margin-right: 20px;
-  }
-
-  li a {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color 0.3s ease-in-out;
-  }
-
-  li a:hover {
-    border-bottom-color: #fff;
-  }
-  fieldset {
-    text-align: center;
-    border: none;
-  }
-
-  legend {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #127358;
-    color: #fff;
-  }
-  div {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  h3 {
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  p {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .form-group {
-    margin-bottom: 15px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-
-  input[type="text"] {
-    width: 615px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
+    .info {
+      text-align: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -155,7 +136,7 @@
     <fieldset>
       <legend>MMM</legend>
       <div class="form-group">
-        <label>m</label>
+        <label>M</label>
         <input type="text" class="form-control" name="m" placeholder="" style="width: 615px">
       </div>
       <div class="form-group">
@@ -170,18 +151,6 @@
         <label>n</label>
         <input type="text" class="form-control" name="K" placeholder="" style="width: 615px">
       </div>
-      <div class="form-group">
-        <label>Tiempo</label>
-        <input type="text" class="form-control" name="tiempo" placeholder="" style="width: 615px">
-      </div>
-      <div class="form-group">
-        <label>Cw</label>
-        <input type="text" class="form-control" name="cw" placeholder="" style="width: 615px">
-      </div>
-      <div class="form-group">
-        <label>Cs</label>
-        <input type="text" class="form-control" name="cs" placeholder="" style="width: 615px">
-      </div>
       <fieldset>
         <button type="submit" class="btn btn-info" name="aceptar">Calcular</button>
       </fieldset>
@@ -192,9 +161,6 @@
 
   <div>
     <legend>Resultados</legend>
-    <p id="costoTotalEspera"></p>
-    <p id="costoTotalServicio"></p>
-    <p id="costoTotal"></p>
     <p id="L"></p>
     <p id="w"></p>
     <p id="Lq"></p>
@@ -209,9 +175,14 @@
       var mu = document.getElementsByName("μ")[0].value;
       var lamda = document.getElementsByName("λ")[0].value;
       var n = document.getElementsByName("K")[0].value;
-      var tiempo = document.getElementsByName("tiempo")[0].value;
+     
+     /* var tiempo = document.getElementsByName("tiempo")[0].value;
       var Cw = document.getElementsByName("cw")[0].value;
-      var Cs = document.getElementsByName("cs")[0].value;
+      var Cs = document.getElementsByName("cs")[0].value;*/
+
+         var tiempo =0
+      var Cw = 0
+      var Cs =0
 
       function fact(num) {
         var factorial = 1;
@@ -243,14 +214,15 @@
       var costoTotalServicio = m * tiempo * Cs;
       var costoTotal = costoTotalServicio + costoTotalEspera;
 
-      document.getElementById("costoTotalEspera").innerHTML = "Costo total espera: " + costoTotalEspera;
-      document.getElementById("costoTotalServicio").innerHTML = "Costo total servicio: " + costoTotalServicio;
-      document.getElementById("costoTotal").innerHTML = "Costo total: " + costoTotal;
+      //document.getElementById("costoTotalEspera").innerHTML = "Costo total espera: " + costoTotalEspera;
+      //document.getElementById("costoTotalServicio").innerHTML = "Costo total servicio: " + costoTotalServicio;
+      //document.getElementById("costoTotal").innerHTML = "Costo total: " + costoTotal;
+     
       document.getElementById("L").innerHTML = "L: " + L;
-      document.getElementById("w").innerHTML = "W: " + w + " Tiempo sistema promedio: " + (w * 60);
+      document.getElementById("w").innerHTML = "W: " + w ;
       document.getElementById("Lq").innerHTML = "Lq: " + Lq;
-      document.getElementById("Wq").innerHTML = "Wq: " + Wq + " Tiempo promedio espera: " + (Wq * 60);
-      document.getElementById("Ro").innerHTML = "Ro: " + Ro + "% se quita 0";
+      document.getElementById("Wq").innerHTML = "Wq: " + Wq ;
+      document.getElementById("Ro").innerHTML = "Ro: " + Ro;
       document.getElementById("PO").innerHTML = "PO: " + PO;
     }
 
